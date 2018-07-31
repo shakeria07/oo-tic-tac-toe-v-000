@@ -16,7 +16,6 @@ WIN_COMBINATIONS = [
 end
 
 @board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-display_board(board)
 
 def display_board(board)
 
