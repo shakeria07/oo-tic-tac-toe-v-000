@@ -16,8 +16,6 @@ class TicTacToe
     gets.strip.downcase == "y" || gets.strip.downcase == "yes" ? play : puts("Goodbye!")
   end
 
-  # #turn gets the player's move, checks that the move is valid, then updates the board with the new move and finally displays the board.
-  # Called by #play
   def turn
     puts "Player #{current_player}, please enter a number 1-9:"
     input = gets.strip
@@ -30,6 +28,7 @@ class TicTacToe
       turn
     end
   end
+  
   def input_to_index(input)
     input.to_i - 1
   end
@@ -78,17 +77,17 @@ class TicTacToe
     return a || b
   end
 
-  
+
   WIN_COMBINATIONS = [
-  
-    [0,1,2], 
-    [3,4,5],  
-    [6,7,8],  
-    [0,3,6],  
-    [1,4,7],  
-    [2,5,8],  
-    [0,4,8],  
-    [2,4,6]  
+
+    [0,1,2],
+    [3,4,5],
+    [6,7,8],
+    [0,3,6],
+    [1,4,7],
+    [2,5,8],
+    [0,4,8],
+    [2,4,6]
   ]
 
   def draw?
